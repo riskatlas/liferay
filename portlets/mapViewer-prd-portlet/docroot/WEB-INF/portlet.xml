@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>mapViewer</portlet-name>
+		<display-name>Map Viewer</display-name>
+		<portlet-class>cz.ccss.mapViewer.RenderAction</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer</title>
+			<short-title>MapViewer </short-title>
+			<keywords>MapViewer, hslayers</keywords>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>mapViewer-debug</portlet-name>
+		<display-name>Map Viewer Debug</display-name>
+		<portlet-class>cz.ccss.mapViewer.RenderAction</portlet-class>
+        <init-param>
+            <name>config-template</name>
+            <value>/html/config/config.jsp</value>
+        </init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer Debug</title>
+			<short-title>MapViewerDebug</short-title>
+			<keywords>MapViewer, hslayers</keywords>
+		</portlet-info>
+	</portlet>
+</portlet-app>

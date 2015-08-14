@@ -1,0 +1,33 @@
+<nav class="$nav_css_class" id="navigation">
+    <div id="main_nav">
+    <ul>
+        #foreach ($nav_item in $nav_items)
+            #set ($url = $nav_item.getRegularURL())
+            #if ($nav_item.isSelected() || $nav_item.isChildSelected())
+                #set ($selected_nav = $nav_item)
+                <li class="selected">
+            #else
+                <li>
+            #end
+
+                <a href="$url" $nav_item.getTarget()><span>$nav_item.icon() $htmlUtil.escape($nav_item.getName())</span></a>
+
+            </li>
+        #end
+    </ul>
+    </div>
+    <div style="clear: both;"></div>
+    #if ($selected_nav.hasChildren())
+        <ul class="child-menu">
+            #foreach ($nav_child in $selected_nav.getChildren())
+                #if ($nav_child.isSelected())
+                    <li class="selected">
+                #else
+                    <li>
+                #end
+                    <a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+                </li>
+            #end
+        </ul>
+    #end
+</nav>

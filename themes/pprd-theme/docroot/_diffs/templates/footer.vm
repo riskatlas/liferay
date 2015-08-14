@@ -1,0 +1,14 @@
+<div id="footer">
+    <div id="ftr_btm">
+        <div id="ftr_links">
+            <b>Links:</b>
+            <a href="http://www.ccss.cz">CCSS</a>;
+            <a href="http://www.eptisa.com">EPTISA</a>;
+            <a href="http://http://euroeastcp.eu/en/pprd-east.html">PPRD EAST</a>;
+        </div>
+        <div id="ftr_social">
+            <a href="http://www.linkedin.com"><img src="$images_folder/social/icon_linkedin.png" /></a>
+            <a href="http://www.slideshare.net"><img src="$images_folder/social/icon_slideshare.png" /></a>
+        </div>
+    </div>
+</div>

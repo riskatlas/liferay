@@ -1,0 +1,6 @@
+<portlet-preferences>
+    <portlet name="layman-portlet-gray">
+        <preference name="layman_url" ref="layurl" 
+            type="string" description="e.g. http://liferay.local/cgi-bin/layman"/>
+   </portlet>
+</portlet-preferences>

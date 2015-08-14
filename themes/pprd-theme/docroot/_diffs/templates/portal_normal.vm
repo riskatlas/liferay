@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+#parse ($init)
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+    <title>$the_title - $company_name</title>
+    <script src="/wwwlibs/jquery/jquery-1.10.2.min.js"></script>
+    <script src="/wwwlibs/hslayers/HS.js" type="text/javascript"></script>
+    <script src="$javascript_folder/social.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var getLRlang = function() {
+            return "$themeDisplay.getLocale().getLanguage()";
+        }
+
+        var isPOI = function () {
+        #set ( $usrPoi = false )
+        #if ($is_signed_in)
+            #set ( $usrRoles = $user.getRoles())
+            #foreach ( $usrRole in $usrRoles )
+                #if ( $usrRole.getName() == "poi" )
+                    #set ( $usrPoi = true )
+                #end
+            #end
+        #end
+        return $usrPoi
+        }
+
+        var getLRUser = function() {
+        #if ($is_signed_in)
+        return "$user.getScreenName()";
+        #else
+        return "guest";
+        #end
+        }
+    </script>
+
+    #set ($prdtype = $themeDisplay.getTheme().getSetting("prd-type"))
+    <script src="$javascript_folder/iframefull.js" type="text/javascript"></script>
+    <script src="$javascript_folder/searchController.js" type="text/javascript"></script>
+    $theme.include($top_head_include)
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Open+Sans+Condensed:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="/wwwlibs/ext/resources/css/ext-all.css"></link>
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="/wwwlibs/ext/resources/css/xtheme-gray.css"></link>
+</head>
+
+#if ( $prdtype == "main" )
+<body class="$css_class">
+    $theme.include($body_top_include)
+    #parse ("$full_templates_path/header.vm")
+
+    <div id="content">
+        #if ($selectable)
+            $theme.include($content_include)
+        #else
+            $portletDisplay.recycle()
+            $portletDisplay.setTitle($the_title)
+            $theme.wrapPortlet("portlet.vm", $content_include)
+        #end
+    </div>
+
+    #parse ("$full_templates_path/footer.vm")
+</body>
+
+#else
+<body class="$css_class prd_normal">
+    #parse ("$full_templates_path/header.vm")
+    <div id="content">
+        #if ($selectable)
+            $theme.include($content_include)
+        #else
+            $portletDisplay.recycle()
+            $portletDisplay.setTitle($the_title)
+            $theme.wrapPortlet("portlet.vm", $content_include)
+        #end
+    </div>
+</body>
+#end
+$theme.include($bottom_include)
+</html>

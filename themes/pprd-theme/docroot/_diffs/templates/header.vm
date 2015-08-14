@@ -1,0 +1,79 @@
+#if($is_signed_in)
+    #if($permissionChecker.isOmniadmin())
+        #dockbar()
+    #end
+#end
+
+#set($companyLocalService = $serviceLocator.findService("com.liferay.portal.service.CompanyLocalService"))
+#set($company = $companyLocalService.getCompany($company_id))
+#set($portalURL = $company.getVirtualHostname())
+
+<div id="topbar">
+    <div id="topbar_service">
+        <span id="search-form-map">
+            <form id="search-map" action="/" onsubmit="return onMapSearchFormSubmit(this)">
+                <span id="search-icon">
+                    <button type="submit" tabindex="-1">
+                        <span class="visuallyhidden">
+                            $languageUtil.get($locale, "geoportal-search-map")
+                        </span>
+                    </button>
+                </span>
+                <label for="search-query-map" class="visuallyhidden">$languageUtil.get($locale, "geoportal-search-map")</label>
+                <input type="text" spellcheck="false" autocomplete="off" name="q" placeholder="$languageUtil.get($locale, "geoportal-search-map")" id="search-query-map">
+            </form>
+        </span> | 
+        <span id="search-form-metadata">
+            <form id="search-metadata" action="/metadata" onsubmit="return onMetadataSearchFormSubmit(this)">
+                <span id="search-icon">
+                    <button type="submit" tabindex="-1">
+                        <span class="visuallyhidden">
+                            $languageUtil.get($locale, "geoportal-search-metadata")
+                        </span>
+                    </button>
+                </span>
+                <label for="search-query-metadata" class="visuallyhidden">$languageUtil.get($locale, "geoportal-search-metadata")</label>
+                <input type="text" spellcheck="false" autocomplete="off" name="q" placeholder="$languageUtil.get($locale, "geoportal-search-metadata")" id="search-query-metadata">
+            </form>
+        </span>
+
+        <span id="lang">$theme.language("fm", null, "languageId", 0)</span>
+        #if($is_signed_in)
+                <span id="userprofile">
+                    |
+                    <a href="$themeDisplay.getURLMyAccount().toString()"><img src="$user.getPortraitURL($themeDisplay)" />
+                    $user.getFullName()</a>
+                    |
+                    <a class="button" href="$sign_out_url">$sign_out_text</a>
+                </span>
+        #else
+            #set ($create_account_url = $portletURLFactory.create($request, "58", $page.getPlid(), "ACTION_PHASE"))
+            $create_account_url.setWindowState("maximized")
+            $create_account_url.setPortletMode("view")
+            $create_account_url.setParameter("saveLastPath", "0")
+            $create_account_url.setParameter("struts_action", "/login/create_account")
+                <span id="userprofile">
+                    |
+                    <a class="button" href="$create_account_url">$languageUtil.get($locale, "register")</a>
+                    |
+                    <a class="button" href="https://$portalURL/cas-server/login?service=http://$portalURL/php/cas.html" rel="nofollow">$sign_in_text</a>
+                </span>
+        #end
+    </div>
+    <header id="banner" role="banner">
+        <hgroup id="heading">
+            <div>
+                <div id="heading-logo">
+                    <a href="http://$portalURL"><img src="$images_folder/pprd_logo.png" alt="Logo" /></a>
+                </div>
+                <div id="heading-text">
+                    <p>EU-Funded Programme for the Preparedness and Response</p><p>to man-made and Natural Disasters in the ENPI East Region</p>
+                </div>
+                <div id="heading-flag">
+                    <img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+                </div>
+            </div>
+        </hgroup>
+    </header>
+</div>
+#parse ("$full_templates_path/navigation.vm")

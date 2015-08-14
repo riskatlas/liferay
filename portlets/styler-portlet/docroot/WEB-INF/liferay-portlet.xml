@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>styler</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/ux/colorpicker/color-picker.ux.css</header-portlet-css>
+		<header-portlet-css>/css/styler.css</header-portlet-css>
+		<header-portal-javascript>/wwwlibs/ext/adapter/ext/ext-base.js</header-portal-javascript>
+		<header-portal-javascript>/wwwlibs/ext/ext-all-debug.js</header-portal-javascript>
+		<header-portal-javascript>/wwwlibs/hslayers/OpenLayers.js</header-portal-javascript>
+		<header-portal-javascript>/js/styler/main.js</header-portal-javascript>
+		<header-portlet-javascript>/js/ux/colorpicker/color-picker.ux.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/Styler.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/tree.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/core.js</header-portlet-javascript>
+		<header-portlet-javascript>/js/Styler/OpenLayers-patch.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/AttributesReader.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/AttributesStore.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ColorField.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ColorManager.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ComarisonComboBox.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/FeatureRenderer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/FillSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/FilterBuilder.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/FilterPanel.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/FontComboBox.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/LegendPanel.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/LineSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/MultiSlider.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/MultiSliderTip.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/PointSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/PolygonSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/RulePanel.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ScaleLimitPanel.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ScaleSlider.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/SliderTip.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/ScaleSliderTip.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/SchemaManager.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/SLDManager.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/StrokeSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/TextSymbolizer.js</header-portlet-javascript>
+        <header-portlet-javascript>/js/Styler/Util.js</header-portlet-javascript>
+		<css-class-wrapper>styler-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

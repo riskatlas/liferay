@@ -1,0 +1,1 @@
+<iframe class="iframefullheight" src="/php/metadata/?action=insert&standard=0&profil=10&design=portal" scrolling="auto" frameborder="0"> </iframe>

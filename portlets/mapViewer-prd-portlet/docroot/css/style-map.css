@@ -1,0 +1,115 @@
+.tip-target {
+    width: 100px;
+    text-align:center;
+    padding: 5px 0;
+    border:1px dotted #99bbe8;
+    background:#dfe8f6;
+    color: #15428b;
+    cursor:default;
+    margin:10px;
+    font:bold 11px tahoma,arial,sans-serif;
+    float:left;
+}
+.geo {
+        display: none;
+}
+
+div#searchFieldDiv {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+}
+
+#form-parc div {
+    display: inline-block
+}
+
+.x-grid3-cell-inner, .x-grid3-hd-inner {
+    white-space:normal !important;
+}
+
+.rec-title {
+    color: #ff9900;
+    font-weight:bold;
+}
+
+#portalmap .olControlAttribution {
+    bottom: 5px;
+};
+
+
+div.olMap div.olSublayersList {
+    top: 50px;
+}
+div.olMap div.olControlMousePosition {
+    left: 50%;
+    width: 110px;
+    height: 20px;
+    padding: 5px;
+    bottom: 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+div.olMap div.HSLayersControlBoxLayerSwitcher {
+     width: 175px;
+     /* top: 40px; */
+}
+
+div.olMap div.olControlScaleLine {
+    /* background: url("imgs/coordsbg.png"); */
+    height: 20px;
+    padding: 5px;
+    bottom: 0px;
+    color: black;
+    font-weight: bold;
+}
+
+ul li, ol ul li {
+    list-style:none outside none!important;
+}
+
+div.olMap div.HSLayersControlAttribution{
+        font-size: 9pt;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+        left: 15px;
+        bottom: 35px;
+}
+div.olMap div.HSLayersControlAttribution a{
+        color: black;
+}
+
+
+.hsControlPanel .razitkoItemInactive {
+  background-image: url("imgs/razitko_off.png");
+  background-repeat: no-repeat;
+}
+
+.hsControlPanel .razitkoItemActive {
+  background-image: url("imgs/razitko_on.png");
+  background-repeat: no-repeat;
+}
+
+.search-box {
+  background-image: url("imgs/search-box.png");
+}
+
+.search-point {
+  background-image: url("imgs/search-point.png");
+}
+
+.aui-field-label-inline-label {
+	display: inline-block;
+	margin-right: 10px;
+	width: 130px;
+}
+
+.hsControlHSFloodItemInactive {
+    background-image: url("../../js/analforms/analforms/view/icons/weather_rain_button.png");
+}
+.hsControlHSFloodItemActive {
+    background-image: url("../../js/analforms/analforms/view/icons/weather_rain_button_active.png");
+}

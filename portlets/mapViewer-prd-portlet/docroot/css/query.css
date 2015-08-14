@@ -1,0 +1,76 @@
+.hs-edit-header {
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+}
+
+.hs-edit-form {
+  padding: 3px;
+  padding-top: 8px;
+  background: #EEEEEE;
+  font-size: 12px;
+}
+
+/*informace o objektech*/
+/*jmena poli*/
+.odp_pole {background-color: #EFEFEF; font-style: italic; width: 40%}
+
+/*hodnoty*/
+.odp_hodn {}
+
+/*tabulka s odpovedi - mrizka*/
+.odp_tab  {
+    font-family: arial,tahoma,helvetica,sans-serif;
+    font-size: 11px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.odp_tab td {
+  padding:3px;
+    border:solid 1px #E0E0E0;
+    vertical-align: top;
+}
+
+.odp_tab th {
+    background: #F9F9F9 url(/wwwlibs/ext/resources/images/default/grid/grid3-hrow.gif) repeat-x scroll 0 bottom;
+    cursor: default;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 25px;  padding: 3px;
+}
+
+/* geo microformat*/
+span.geo {display:none}
+
+/* editing */
+.hs-edit-edit {
+    background: url("http://dev.bnhelp.cz/wwwlibs/hslayers/trunk/resources/img/edit.png") no-repeat;
+    padding-left:16px;
+    height: 16px;
+    display: inline-block;
+}
+.hs-edit-delete {
+    background: url("http://dev.bnhelp.cz/wwwlibs/hslayers/trunk/resources/img/delete.png") no-repeat;
+    padding-left:16px;
+    height: 16px;
+    display: inline-block;
+      margin-left:3px;
+}
+
+.hs-edit-msg {
+  padding: 10px 10px 10px 42px;
+  margin: 10px 20px 10px 20px;
+  background: url(http://dev.bnhelp.cz/wwwlibs/hslayers/trunk/resources/img/ok.png) no-repeat #FEFEFE;
+  color: #000000;
+  font-weight: bold;
+}
+
+
+
+.hs-query-editbar{
+  float: right;
+}
+
+tr.odp-row-sel {background: #FFFFB0}
+
